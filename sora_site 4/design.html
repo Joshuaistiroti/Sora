@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design Your Tee – SØRA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">SØRA</div>
+      <ul class="nav-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#characters">Characters</a></li>
+        <li><a href="index.html#store">Store</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="trivia.html">Trivia</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="photobooth.html">Photo Booth</a></li>
+        <li><a href="leaderboard.html">Leaderboard</a></li>
+      </ul>
+    </nav>
+
+    <section class="design-tool">
+      <h1>Design Your Tee</h1>
+      <p>Choose a colour and a character design to create your own SØRA tee.</p>
+      <div class="design-controls">
+        <label>
+          Colour:
+          <input type="color" id="tee-color" value="#f5e6ca" />
+        </label>
+        <label>
+          Design:
+          <select id="design-select">
+            <option value="izo.png">Izo</option>
+            <option value="niv.png">Niv</option>
+            <option value="deyvi.png">Deyvi</option>
+            <option value="rifo.png">Rifo</option>
+            <option value="cefi.png">Cefi</option>
+            <option value="yoyo.png">Yoyo</option>
+            <option value="beru.png">Beru</option>
+          </select>
+        </label>
+      </div>
+      <div class="tee-preview">
+        <div id="tee-base" class="tee-base"></div>
+        <img id="tee-design" src="images/izo.png" alt="Tee design" />
+      </div>
+
+      <!-- Call‑to‑action and download/order buttons -->
+      <p style="margin-top: 1rem; font-size: 0.95rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+        Happy with your creation? You can download your design as an image to share with friends or order a real tee
+        through our print partner. Choose your colour and artwork above, then click one of the buttons below.
+      </p>
+      <div style="margin-top: 0.75rem; display:flex; justify-content:center; gap:0.75rem; flex-wrap:wrap;">
+        <button id="download-btn" class="btn">Download Design</button>
+        <a href="https://www.printful.com/custom-products" target="_blank" class="btn" style="white-space:nowrap;">Order via Printful</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 SØRA Friends. Site created by <a href="mailto:joshuaistiroti@gmail.com">joshuaistiroti@gmail.com</a>. All rights reserved.
+        <span id="easter-egg">☕</span>
+      </p>
+      <p style="font-size:0.85rem;">
+        <a href="privacy.html">Privacy Policy</a>
+      </p>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="design.js"></script>
+  </body>
+</html>

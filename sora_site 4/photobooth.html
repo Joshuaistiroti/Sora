@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Booth – SØRA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">SØRA</div>
+      <ul class="nav-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#characters">Characters</a></li>
+        <li><a href="index.html#store">Store</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="trivia.html">Trivia</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="photobooth.html">Photo Booth</a></li>
+        <li><a href="leaderboard.html">Leaderboard</a></li>
+      </ul>
+    </nav>
+
+    <section class="photo-booth">
+      <h1>Photo Booth</h1>
+      <p>Upload your photo and add a SØRA overlay.</p>
+      <div class="controls">
+        <input type="file" id="photo-upload" accept="image/*" />
+        <label for="overlay-select">Overlay:</label>
+        <select id="overlay-select">
+          <option value="">None</option>
+          <!-- Character tees as overlays -->
+          <option value="izo.png">Izo Tee</option>
+          <option value="niv.png">Niv Tee</option>
+          <option value="deyvi.png">Deyvi Tee</option>
+          <option value="rifo.png">Rifo Tee</option>
+          <option value="cefi.png">Cefi Tee</option>
+          <option value="yoyo.png">Yoyo Tee</option>
+          <option value="beru.png">Beru Tee</option>
+          <!-- Fun AR overlays -->
+          <option value="overlay_moustache.png">Moustache</option>
+          <option value="overlay_glasses.png">Glasses</option>
+          <option value="overlay_star.png">Star</option>
+        </select>
+      </div>
+      <div class="photo-preview">
+        <img id="user-photo" alt="Your uploaded photo" />
+        <img id="overlay-img" alt="Overlay" />
+      </div>
+
+      <!-- Download button for composed images -->
+      <p style="margin-top: 1rem; font-size: 0.95rem; max-width:600px; margin-left:auto; margin-right:auto;">
+        Create your own SØRA‑themed portrait! Upload a photo, pick an overlay, then download your masterpiece to share on
+        social media or keep as a memento.
+      </p>
+      <button id="download-photo-btn" class="btn" style="margin-top:0.5rem;">Download Image</button>
+    </section>
+
+    <footer>
+      <p>© 2025 SØRA Friends. Site created by <a href="mailto:joshuaistiroti@gmail.com">joshuaistiroti@gmail.com</a>. All rights reserved.
+        <span id="easter-egg">☕</span>
+      </p>
+      <p style="font-size:0.85rem;">
+        <a href="privacy.html">Privacy Policy</a>
+      </p>
+    </footer>
+    <script src="main.js"></script>
+    <script src="photobooth.js"></script>
+  </body>
+</html>

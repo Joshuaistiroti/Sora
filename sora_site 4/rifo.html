@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rifo – SØRA Friend</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="logo">SØRA</div>
+      <ul class="nav-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#characters">Characters</a></li>
+        <li><a href="index.html#store">Store</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="trivia.html">Trivia</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="photobooth.html">Photo Booth</a></li>
+        <li><a href="leaderboard.html">Leaderboard</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero section with real photo -->
+    <section class="char-hero">
+      <img src="images/rifo-photo.jpg" alt="Rifo in real life" />
+      <div class="hero-text">
+        <h1>Rifo</h1>
+        <p>Out of bed = big deal.</p>
+      </div>
+    </section>
+
+    <!-- Story and tee section -->
+    <section class="char-story">
+      <div class="story-text">
+        <h2>The Story</h2>
+        <p>Rifo is the master of naps and sarcasm. His greatest achievement each
+          day is getting out of bed—so when he does, you know it's for a
+          good reason. Armed with witty comebacks and a mug of coffee, he
+          transforms from a sleepyhead into the life of the party in seconds.
+          Sleep may be his hobby, but delivering laughs is his true calling.</p>
+      </div>
+      <div class="story-tee">
+        <img src="images/rifo.png" alt="Rifo tee design" />
+        <p class="tee-tagline">Out of bed = Big deal.</p>
+      </div>
+    </section>
+
+    <!-- Chatbot section -->
+    <section class="chatbot-section">
+      <h3>Chat with Rifo</h3>
+      <div id="chat-window-rifo" class="chat-window"></div>
+      <form class="chat-form" data-character="Rifo">
+        <input type="text" placeholder="Say something..." />
+        <button type="submit" class="btn">Send</button>
+      </form>
+    </section>
+
+    <!-- Journal section -->
+    <section class="char-diary">
+      <h3>Rifo’s Journal</h3>
+      <div class="diary-entry">
+        <p>Woke up before noon. That's my cardio for the year.</p>
+      </div>
+      <div class="diary-entry">
+        <p>Dreamt I had a coffee machine that never runs out. Woke up crying.</p>
+      </div>
+    </section>
+
+    <!-- Notify section -->
+    <section class="store" style="background:#fafafa">
+      <h2 class="section-title">Join the Waitlist</h2>
+      <p class="coming-soon">
+        Our limited‑edition tees are almost here. Sign up below to be the first
+        to know when we drop Rifo's collection!
+      </p>
+      <form class="signup-form" onsubmit="return false;">
+        <input type="email" placeholder="Enter your email" required />
+        <button type="submit" class="btn">Notify Me</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 SØRA Friends. Site created by <a href="mailto:joshuaistiroti@gmail.com">joshuaistiroti@gmail.com</a>. All rights reserved.
+        <span id="easter-egg">☕</span>
+      </p>
+      <p style="font-size:0.85rem;"><a href="privacy.html">Privacy Policy</a></p>
+    </footer>
+    <!-- Shared script for countdown and fun facts (used on the home page) -->
+    <script src="main.js"></script>
+    <script src="chatbot.js"></script>
+
+    <!-- Floating emoji effect for Rifo page -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const hero = document.querySelector('.char-hero');
+        if (!hero) return;
+        const emoji = '☕';
+        hero.addEventListener('click', function(e) {
+          const span = document.createElement('span');
+          span.textContent = emoji;
+          span.className = 'floating-emoji';
+          span.style.left = e.clientX + 'px';
+          span.style.top = e.clientY + 'px';
+          document.body.appendChild(span);
+          setTimeout(() => span.remove(), 2000);
+        });
+      });
+    </script>
+  </body>
+</html>

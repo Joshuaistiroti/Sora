@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SØRA Friends – Coming Soon</title>
+    <!-- Google Fonts for clean typography -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="logo">SØRA</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#characters">Characters</a></li>
+        <li><a href="#store">Store</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="trivia.html">Trivia</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="photobooth.html">Photo Booth</a></li>
+        <li><a href="leaderboard.html">Leaderboard</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Celebrate Friendship.<br />Wear Your Story.</h1>
+        <p>
+          Discover how a tight‑knit group of friends turned inside jokes and
+          real‑life adventures into wearable art. SØRA Friends brings their
+          personalities to life through playful avatars and unique apparel.
+        </p>
+        <!-- Countdown timer for the next drop. The dynamic text is updated via main.js -->
+        <div class="countdown-wrapper">
+          Next Drop In <span id="drop-countdown">--</span>
+        </div>
+        <a href="#characters" class="btn">Meet the Crew</a>
+      </div>
+    </section>
+
+    <!-- Characters Section -->
+    <section id="characters" class="characters">
+      <h2 class="section-title">Meet the SØRA Friends</h2>
+      <div class="card-grid">
+        <!-- Character cards with real photos. Clicking takes you to a dedicated page for each friend -->
+        <div class="card">
+          <img src="images/izo-photo.jpg" alt="Photo of Izo" />
+          <div class="card-overlay">
+            <h3>Izo</h3>
+            <p>Quiet grind. Loud results.</p>
+            <a href="izo.html" class="view-link">Explore &amp; Tee</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/niv-photo.jpg" alt="Photo of Niv" />
+          <div class="card-overlay">
+            <h3>Niv</h3>
+            <p>CTRL + ALT + WTF</p>
+            <a href="niv.html" class="view-link">Explore &amp; Tee</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/deyvi-photo.jpg" alt="Photo of Deyvi" />
+          <div class="card-overlay">
+            <h3>Deyvi</h3>
+            <p>Small size, major impact.</p>
+            <a href="deyvi.html" class="view-link">Explore &amp; Tee</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/rifo-photo.jpg" alt="Photo of Rifo" />
+          <div class="card-overlay">
+            <h3>Rifo</h3>
+            <p>Out of bed = big deal.</p>
+            <a href="rifo.html" class="view-link">Explore &amp; Tee</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/cefi-photo.jpg" alt="Photo of Cefi" />
+          <div class="card-overlay">
+            <h3>Cefi</h3>
+            <p>Flirts hard. Loves harder.</p>
+            <a href="cefi.html" class="view-link">Explore &amp; Tee</a>
+          </div>
+        </div>
+        <!-- Newly added characters -->
+        <div class="card">
+          <img src="images/yoyo-photo.jpg" alt="Photo of Yoyo" />
+          <div class="card-overlay">
+            <h3>Yoyo</h3>
+            <p>Stay chill. Hit hard.</p>
+            <a href="yoyo.html" class="view-link">Explore &amp; Tee</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/beru-photo.jpg" alt="Photo of Beru" />
+          <div class="card-overlay">
+            <h3>Beru</h3>
+            <p>Life too fast, I'm not.</p>
+            <a href="beru.html" class="view-link">Explore &amp; Tee</a>
+          </div>
+        </div>
+        <!-- Future cards can be added here for other friends -->
+      </div>
+
+      <!-- Fun fact section to keep visitors entertained -->
+      <div class="fun-fact-container">
+        <h3>Did You Know?</h3>
+        <p id="fun-fact">Our friends have some quirky stories to share.</p>
+      </div>
+
+      <!-- Call to action for the interactive quiz -->
+      <div class="quiz-cta">
+        <h3>Find Your Match</h3>
+        <p>Take our fun personality quiz to see which SØRA friend you're most like!</p>
+        <a href="quiz.html" class="btn">Take the Quiz</a>
+      </div>
+
+      <!-- Call to action for the trivia game -->
+      <div class="trivia-cta">
+        <h3>Think you know us?</h3>
+        <p>Prove it with our SØRA Trivia Challenge!</p>
+        <a href="trivia.html" class="btn">Play Trivia</a>
+      </div>
+    </section>
+
+    <!-- Store Section -->
+    <section id="store" class="store">
+      <h2 class="section-title">Store</h2>
+      <p class="coming-soon">
+        Our limited‑edition tees are almost here. We’ve partnered with Printful to
+        handle printing and global shipping, so ordering your favourite design will
+        be seamless. Sign up below to be the first to know when the collection
+        goes live!
+      </p>
+      <div class="store-grid">
+        <!-- Product cards with coming soon overlay -->
+        <div class="product-card">
+          <img src="images/beru.png" alt="Beru tee" />
+          <div class="product-overlay">Coming Soon</div>
+        </div>
+        <div class="product-card">
+          <img src="images/izo.png" alt="Izo tee" />
+          <div class="product-overlay">Coming Soon</div>
+        </div>
+        <div class="product-card">
+          <img src="images/yoyo.png" alt="Yoyo tee" />
+          <div class="product-overlay">Coming Soon</div>
+        </div>
+        <div class="product-card">
+          <img src="images/rifo.png" alt="Rifo tee" />
+          <div class="product-overlay">Coming Soon</div>
+        </div>
+        <div class="product-card">
+          <img src="images/deyvi.png" alt="Deyvi tee" />
+          <div class="product-overlay">Coming Soon</div>
+        </div>
+        <div class="product-card">
+          <img src="images/niv.png" alt="Niv tee" />
+          <div class="product-overlay">Coming Soon</div>
+        </div>
+        <div class="product-card">
+          <img src="images/cefi.png" alt="Cefi tee" />
+          <div class="product-overlay">Coming Soon</div>
+        </div>
+      </div>
+      <form class="signup-form" onsubmit="return false;">
+        <input type="email" placeholder="Enter your email" required />
+        <button type="submit" class="btn">Notify Me</button>
+      </form>
+
+      <!-- Informative note about Printful integration -->
+      <p style="margin-top:1rem; font-size:0.9rem; color:#666; max-width:600px; margin-left:auto; margin-right:auto;">
+        We'll be using Printful, a print‑on‑demand provider known for its own
+        fulfillment facilities and competitive international shipping rates. As soon
+        as the store opens, you’ll be able to order directly from our site via Printful.
+      </p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <h2 class="section-title">About SØRA</h2>
+      <p>
+        SØRA started as a project between close friends who wanted to celebrate
+        their bonds through design. Each character you see on this site is
+        inspired by a real person and their favourite quote or catchphrase. Our
+        mission is to bring their stories to life through immersive experiences
+        and playful fashion. We’re building a community around friendship,
+        creativity and wearable storytelling—join us on this journey!
+      </p>
+      <p style="margin-top:1rem; font-size:0.95rem;">
+        <strong>About the founder:</strong> This site was designed and built by
+        <em>the founding member of the SØRA crew</em> as a labour of love. If you have
+        questions, feedback or partnership ideas, feel free to reach out at
+        <a href="mailto:joshuaistiroti@gmail.com">joshuaistiroti@gmail.com</a>.
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 SØRA Friends. Site created by <a href="mailto:joshuaistiroti@gmail.com">joshuaistiroti@gmail.com</a>. All rights reserved.
+        <span id="easter-egg">☕</span>
+      </p>
+      <p style="font-size:0.85rem;">
+        <a href="privacy.html">Privacy Policy</a>
+      </p>
+    </footer>
+
+    <!-- Main script for countdown and fun facts -->
+    <script src="main.js"></script>
+  </body>
+</html>

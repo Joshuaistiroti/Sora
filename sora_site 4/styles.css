@@ -1,0 +1,752 @@
+/* Root variables for consistent theming */
+:root {
+  /* Updated color palette: a sophisticated dark/navy base with a warm accent
+     to evoke an elite yet playful vibe. */
+  --primary-color: #21253d; /* deep navy */
+  --accent-color: #f79e02; /* warm amber/orange */
+  --background-color: #f5f3ef; /* light neutral background */
+  --card-background: #ffffff;
+  --overlay-background: rgba(0, 0, 0, 0.6);
+  --text-color: #2e2e2e;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  /* Replace static background colour with a subtle animated gradient. The
+     gradient shifts slowly to give the site an "elite" feel without being
+     distracting. */
+  background: linear-gradient(-45deg, #f8f7f3, #ebe6da, #f8f7f3, #ebe6da);
+  background-size: 400% 400%;
+  animation: gradientShift 30s ease infinite;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Keyframes for the animated page background */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Navigation bar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--background-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent-color);
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #f8f7f3 0%, #ebe6da 100%);
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  max-width: 600px;
+  margin: 0 auto 1.5rem auto;
+  font-size: 1.125rem;
+  color: #555555;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent-color);
+  color: #fff;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #504ce1;
+}
+
+/* Section titles */
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Characters grid */
+.characters {
+  padding: 4rem 1rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: var(--card-background);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+  /* Ensure the image fills the card without leaving white gaps */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card-overlay h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.card-overlay p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.view-3d-btn {
+  align-self: flex-start;
+  background: var(--accent-color);
+  border: none;
+  color: #fff;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.8rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-3d-btn:hover {
+  background: #504ce1;
+}
+
+/* Link styled like a button for character cards */
+.view-link {
+  align-self: flex-start;
+  background: var(--accent-color);
+  color: #fff;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.8rem;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.view-link:hover {
+  background: #504ce1;
+}
+
+/* Countdown timer styling */
+.countdown-wrapper {
+  margin: 1rem auto 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+/* Fun fact section styling */
+.fun-fact-container {
+  margin-top: 3rem;
+  text-align: center;
+}
+.fun-fact-container h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.fun-fact-container p {
+  font-size: 1rem;
+  color: #555555;
+}
+
+/* Quiz call-to-action styling */
+.quiz-cta {
+  margin-top: 2rem;
+  text-align: center;
+}
+.quiz-cta h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.quiz-cta p {
+  color: #555555;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* Trivia call-to-action on the characters section */
+.trivia-cta {
+  margin-top: 2rem;
+  text-align: center;
+}
+.trivia-cta h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.trivia-cta p {
+  color: #555555;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* Store section */
+.store {
+  padding: 4rem 1rem;
+  background: #fafafa;
+  text-align: center;
+}
+
+.store-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 2rem auto;
+}
+
+.product-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: var(--card-background);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.product-card img {
+  width: 100%;
+  display: block;
+}
+
+.product-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-card:hover .product-overlay {
+  opacity: 1;
+}
+
+.coming-soon {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: #555555;
+}
+
+.signup-form {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.signup-form input[type='email'] {
+  padding: 0.6rem 1rem;
+  border: 1px solid #dddddd;
+  border-radius: 30px;
+  min-width: 220px;
+}
+
+.signup-form button {
+  padding: 0.6rem 1rem;
+  border-radius: 30px;
+  border: none;
+  background: var(--accent-color);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-form button:hover {
+  background: #504ce1;
+}
+
+/* About section */
+.about {
+  padding: 4rem 1rem;
+  background: #fff;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about p {
+  font-size: 1rem;
+  color: #555555;
+  line-height: 1.7;
+}
+
+/* Footer */
+footer {
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  background-color: var(--background-color);
+  color: #777777;
+}
+
+/* Make the easter egg (coffee emoji) slightly larger and spaced so it's easier to click */
+#easter-egg {
+  margin-left: 0.3rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Viewer modal */
+.viewer-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.viewer-modal.hidden {
+  display: none;
+}
+
+.viewer-content {
+  position: relative;
+  width: 85vw;
+  max-width: 650px;
+  height: 70vh;
+  background: var(--primary-color);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.viewer-content .fallback-img {
+  /* Fill the available space like the canvas */
+  position: relative;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: var(--primary-color);
+}
+
+.viewer-content canvas {
+  flex: 1;
+  width: 100%;
+  display: block;
+}
+
+/* Story area within the viewer modal */
+.story-area {
+  padding: 1rem;
+  color: #f5f3ef;
+  background: var(--primary-color);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  max-height: 40%;
+  overflow-y: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Character dedicated page styles */
+.char-hero {
+  position: relative;
+  width: 100%;
+  /* Increase height to give vertical photos more room and avoid excessive cropping */
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /* Provide a dark backdrop for letterboxing when using contain */
+  background-color: var(--primary-color);
+}
+.char-hero img {
+  /* Scale the image to the height of the hero to ensure the full head and body are visible.
+     Width adjusts to maintain aspect ratio; any horizontal overflow is hidden by the parent. */
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+.char-hero .hero-text {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+}
+
+.char-story {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 3rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.char-story .story-text {
+  flex: 1 1 300px;
+  color: var(--text-color);
+}
+.char-story .story-text h2 {
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+}
+.char-story .story-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.char-story .story-tee {
+  flex: 1 1 300px;
+  text-align: center;
+}
+.char-story .story-tee img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.tee-tagline {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: var(--text-color);
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Quiz page styling */
+.quiz {
+  padding: 4rem 1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+.quiz h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+.quiz-question {
+  margin-bottom: 1.5rem;
+}
+.quiz-result {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+}
+.quiz-result.hidden {
+  display: none;
+}
+
+/* Toast message used for the easter egg secret. Appears at the bottom center of the screen. */
+.secret-message {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--accent-color);
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  font-size: 0.9rem;
+}
+
+/* Chatbot styles */
+.chatbot-section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+.chatbot-section h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+.chat-window {
+  border: 1px solid #e0e0e0;
+  background-color: #fdfdfd;
+  padding: 0.5rem;
+  height: 200px;
+  overflow-y: auto;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+.chat-message {
+  margin: 0.25rem 0;
+}
+.chat-message.user {
+  text-align: right;
+  font-weight: 600;
+}
+.chat-message.friend {
+  text-align: left;
+  color: var(--accent-color);
+}
+.chat-form {
+  display: flex;
+}
+.chat-form input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+.chat-form button {
+  padding: 0.5rem 1rem;
+  background-color: var(--accent-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Design tool styles */
+.design-tool {
+  padding: 3rem 1rem;
+  text-align: center;
+  /* Add a subtle white container to lift the tool off the animated background */
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+.design-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.design-controls label {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.tee-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  max-width: 400px;
+  position: relative;
+}
+.tee-base {
+  width: 100%;
+  padding-top: 120%; /* maintain aspect ratio */
+  background-color: #f5e6ca;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.tee-preview img {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+}
+
+/* Photo booth styles */
+.photo-booth {
+  padding: 3rem 1rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+.photo-booth .controls {
+  margin-bottom: 1rem;
+}
+.photo-preview {
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.photo-preview img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+.photo-preview #overlay-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+/* Leaderboard styles */
+.leaderboard-page {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+.leaderboard-list {
+  list-style: none;
+  padding: 0;
+  max-width: 400px;
+  margin: 1rem auto;
+}
+.leaderboard-list li {
+  background-color: #f9f9f9;
+  padding: 0.5rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+/* Floating emoji animation for character pages */
+.floating-emoji {
+  position: fixed;
+  font-size: 2rem;
+  pointer-events: none;
+  z-index: 9999;
+  animation: floatUp 2s ease forwards;
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+}
+
+/* Diary/journal section for characters */
+.char-diary {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem 1.5rem;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+.char-diary h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--primary-color);
+}
+.diary-entry {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background: #ffffff;
+  border-left: 4px solid var(--accent-color);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.diary-entry:last-child {
+  margin-bottom: 0;
+}
+.diary-entry p {
+  margin: 0;
+  line-height: 1.4;
+  color: #333;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Niv – SØRA Friend</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">SØRA</div>
+      <ul class="nav-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#characters">Characters</a></li>
+        <li><a href="index.html#store">Store</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="trivia.html">Trivia</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="photobooth.html">Photo Booth</a></li>
+        <li><a href="leaderboard.html">Leaderboard</a></li>
+      </ul>
+    </nav>
+
+    <section class="char-hero">
+      <img src="images/niv-photo.jpg" alt="Niv in real life" />
+      <div class="hero-text">
+        <h1>Niv</h1>
+        <p>CTRL + ALT + WTF</p>
+      </div>
+    </section>
+
+    <section class="char-story">
+      <div class="story-text">
+        <h2>The Story</h2>
+        <p>The bundle of energy with wild curls. Niv lives by a simple command:
+          CTRL + ALT + WTF. He keeps the group laughing with his quick wit and
+          seemingly endless battery life.</p>
+      </div>
+      <div class="story-tee">
+        <img src="images/niv.png" alt="Niv tee design" />
+        <p class="tee-tagline">CTRL + ALT + WTF</p>
+      </div>
+    </section>
+
+    <!-- Chatbot section -->
+    <section class="chatbot-section">
+      <h3>Chat with Niv</h3>
+      <div id="chat-window-niv" class="chat-window"></div>
+      <form class="chat-form" data-character="Niv">
+        <input type="text" placeholder="Say something..." />
+        <button type="submit" class="btn">Send</button>
+      </form>
+    </section>
+
+    <!-- Journal section -->
+    <section class="char-diary">
+      <h3>Niv’s Journal</h3>
+      <div class="diary-entry">
+        <p>Went for a 5km run and forgot to breathe. 0/10 would not recommend.</p>
+      </div>
+      <div class="diary-entry">
+        <p>Tried to create a beat with a coffee mug and a spoon. Neighbours loved it.</p>
+      </div>
+    </section>
+
+    <section class="store" style="background:#fafafa">
+      <h2 class="section-title">Join the Waitlist</h2>
+      <p class="coming-soon">
+        Our limited‑edition tees are almost here. Sign up below to be the first to
+        know when we drop Niv's collection!
+      </p>
+      <form class="signup-form" onsubmit="return false;">
+        <input type="email" placeholder="Enter your email" required />
+        <button type="submit" class="btn">Notify Me</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>© 2025 SØRA Friends. Site created by <a href="mailto:joshuaistiroti@gmail.com">joshuaistiroti@gmail.com</a>. All rights reserved.
+        <span id="easter-egg">☕</span>
+      </p>
+      <p style="font-size:0.85rem;"><a href="privacy.html">Privacy Policy</a></p>
+    </footer>
+    <!-- Shared script for countdown and fun facts (used on the home page) -->
+    <script src="main.js"></script>
+    <script src="chatbot.js"></script>
+
+    <!-- Floating emoji effect for Niv page -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const hero = document.querySelector('.char-hero');
+        if (!hero) return;
+        const emoji = '⚡';
+        hero.addEventListener('click', function(e) {
+          const span = document.createElement('span');
+          span.textContent = emoji;
+          span.className = 'floating-emoji';
+          span.style.left = e.clientX + 'px';
+          span.style.top = e.clientY + 'px';
+          document.body.appendChild(span);
+          setTimeout(() => span.remove(), 2000);
+        });
+      });
+    </script>
+  </body>
+</html>

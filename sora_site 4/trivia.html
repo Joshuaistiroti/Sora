@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SØRA Trivia Quiz</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">SØRA</div>
+      <ul class="nav-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#characters">Characters</a></li>
+        <li><a href="index.html#store">Store</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="trivia.html">Trivia</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="photobooth.html">Photo Booth</a></li>
+        <li><a href="leaderboard.html">Leaderboard</a></li>
+      </ul>
+    </nav>
+
+    <section class="quiz">
+      <h1>SØRA Trivia</h1>
+      <p>Test your knowledge of the crew’s quirks and inside jokes.</p>
+      <!-- The trivia questions will be injected here by trivia.js -->
+      <form id="trivia-form">
+        <div id="trivia-container"></div>
+        <button type="submit" class="btn" style="margin-top:1rem">Check Answers</button>
+      </form>
+      <div id="trivia-result" class="quiz-result hidden"></div>
+    </section>
+
+    <footer>
+      <p>© 2025 SØRA Friends. Site created by <a href="mailto:joshuaistiroti@gmail.com">joshuaistiroti@gmail.com</a>. All rights reserved.
+        <span id="easter-egg">☕</span>
+      </p>
+      <p style="font-size:0.85rem;">
+        <a href="privacy.html">Privacy Policy</a>
+      </p>
+    </footer>
+
+    <!-- External scripts -->
+    <!-- main.js handles countdown, fun facts and easter egg toast -->
+    <script src="main.js"></script>
+    <!-- Load trivia logic after main.js -->
+    <script src="trivia.js"></script>
+  </body>
+</html>

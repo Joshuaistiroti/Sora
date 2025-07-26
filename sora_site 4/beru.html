@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beru – SØRA Friend</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="logo">SØRA</div>
+      <ul class="nav-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#characters">Characters</a></li>
+        <li><a href="index.html#store">Store</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="trivia.html">Trivia</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="photobooth.html">Photo Booth</a></li>
+        <li><a href="leaderboard.html">Leaderboard</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero section with real photo -->
+    <section class="char-hero">
+      <img src="images/beru-photo.jpg" alt="Beru in real life" />
+      <div class="hero-text">
+        <h1>Beru</h1>
+        <p>Life too fast, I'm not.</p>
+      </div>
+    </section>
+
+    <!-- Story and tee section -->
+    <section class="char-story">
+      <div class="story-text">
+        <h2>The Story</h2>
+        <p>Beru lives life in the slow lane, savoring every moment. While the
+          world rushes around him, he enjoys taking his time, soaking up vibes
+          and finding joy in the smallest things. But don't underestimate him—when
+          it's time to move, he'll surprise you with his speed and sharp sense
+          of humour.</p>
+      </div>
+      <div class="story-tee">
+        <img src="images/beru.png" alt="Beru tee design" />
+        <p class="tee-tagline">Life too fast, I'm not.</p>
+      </div>
+    </section>
+
+    <!-- Chatbot section -->
+    <section class="chatbot-section">
+      <h3>Chat with Beru</h3>
+      <div id="chat-window-beru" class="chat-window"></div>
+      <form class="chat-form" data-character="Beru">
+        <input type="text" placeholder="Say something..." />
+        <button type="submit" class="btn">Send</button>
+      </form>
+    </section>
+
+    <!-- Journal section -->
+    <section class="char-diary">
+      <h3>Beru’s Journal</h3>
+      <div class="diary-entry">
+        <p>Watched traffic go by while sipping tea. Felt like time slowed down to match my pace.</p>
+      </div>
+      <div class="diary-entry">
+        <p>Moved so slowly today that someone asked if I was buffering.</p>
+      </div>
+    </section>
+
+    <!-- Notify section -->
+    <section class="store" style="background:#fafafa">
+      <h2 class="section-title">Join the Waitlist</h2>
+      <p class="coming-soon">
+        Our limited‑edition tees are almost here. Sign up below to be the first
+        to know when we drop Beru's collection!
+      </p>
+      <form class="signup-form" onsubmit="return false;">
+        <input type="email" placeholder="Enter your email" required />
+        <button type="submit" class="btn">Notify Me</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 SØRA Friends. Site created by <a href="mailto:joshuaistiroti@gmail.com">joshuaistiroti@gmail.com</a>. All rights reserved.
+        <span id="easter-egg">☕</span>
+      </p>
+      <p style="font-size:0.85rem;"><a href="privacy.html">Privacy Policy</a></p>
+    </footer>
+
+    <!-- Shared script for countdown and fun facts -->
+    <script src="main.js"></script>
+    <script src="chatbot.js"></script>
+
+    <!-- Floating emoji effect for Beru page -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const hero = document.querySelector('.char-hero');
+        if (!hero) return;
+        const emoji = '😴';
+        hero.addEventListener('click', function(e) {
+          const span = document.createElement('span');
+          span.textContent = emoji;
+          span.className = 'floating-emoji';
+          span.style.left = e.clientX + 'px';
+          span.style.top = e.clientY + 'px';
+          document.body.appendChild(span);
+          setTimeout(() => span.remove(), 2000);
+        });
+      });
+    </script>
+  </body>
+</html>
